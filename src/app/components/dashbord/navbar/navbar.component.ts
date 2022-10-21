@@ -1,6 +1,7 @@
 import { navbarData } from './data'; 
 import { animate, keyframes, style, transition, trigger } from '@angular/animations';
 import { Component, Output, EventEmitter, OnInit, HostListener } from '@angular/core';
+import { MenuService } from 'src/app/services/menu.service';
 
 interface SideNavToggle {
   screenWidth: number;
@@ -53,9 +54,16 @@ export class NavbarComponent implements OnInit {
       this.onToggleSideNav.emit({collapsed: this.collapsed, screenWidth: this.screenWidth});
     }
   }
+constructor(){
 
+}
   ngOnInit(): void {
       this.screenWidth = window.innerWidth;
+      this.cargarMenu();
+  }
+
+  cargarMenu(){
+  
   }
 
   toggleCollapse(): void {

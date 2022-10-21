@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { Usuario } from 'src/app/interfaces/usuario';
+import { UsuariosService } from 'src/app/services/usuarios.service';
+
 
 @Component({
   selector: 'app-table-student',
@@ -6,27 +12,43 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./table-student.component.scss']
 })
 export class TableStudentComponent implements OnInit {
+  
+listaUsuarios:  Usuario[] = [];
 
-  data: any = [
-    {id:1, nombre:'Ana Suarez', curso:'Angular', profesor: 'Javier Alvez', tutor:'Maria Diaz' },
-    {id:1, nombre:'Carolina Alvez', curso:'Angular', profesor: 'Javier Alvez', tutor:'Maria Diaz' },
-    {id:1, nombre:'Lorenzo Miranda', curso:'React', profesor: 'Daniela Lopez', tutor:'Mariana Coppa' },
-    {id:1, nombre:'Juan Gonzalez', curso:'Angular', profesor: 'Javier Alvez', tutor:'Maria Diaz' },
-    {id:1, nombre:'Noelia Martinez', curso:'React', profesor: 'Daniela Lopez', tutor:'Mariana Coppa' }
-  ]
- 
-  constructor() { }
+  columnas: string[] = ['nombre', 'curso', 'profesor', 'fechaInicio', 'inscripciones','acciones'];
+  dataSource!: MatTableDataSource<any>;
 
-  ngOnInit() {
-    
+
+  
+  @ViewChild(MatPaginator)paginator!: MatPaginator;
+  @ViewChild(MatSort)sort!: MatSort;
+
+  constructor(private _UsuariosService: UsuariosService){}
+
+  ngOnInit(): void {
+    this.cargarUsuarios();
   }
 
 
+  cargarUsuarios(){
+    this.listaUsuarios = this._UsuariosService.getUsuario();
+    this.dataSource = new MatTableDataSource(this.listaUsuarios);
+  }
+
+ 
+  deleteUser(index: number){
+   console.log(index)
+    this._UsuariosService.deleteUser(index);
+    this.cargarUsuarios();
+  }
+
+  ngAfterViewInit(){
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort
+
+  }
 }
-
-
-/*
-Copyright 2017-2018 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
+ 
+ /* cargarUsuarios(){
+    this.listaUsuario = this._usuarioService.getUsuario();
+  }*/

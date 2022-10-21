@@ -1,0 +1,14 @@
+[
+    {
+        "routeLink": "home",
+        "icon": "fa fa-home",
+        "label": "Inicio"
+    },
+    {
+        "routeLink": "usuarios",
+        "icon": "fa fa-users",
+        "label": "Usuarios"    
+    }    
+   
+]
+
