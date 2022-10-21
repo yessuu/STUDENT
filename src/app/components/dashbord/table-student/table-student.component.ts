@@ -14,9 +14,19 @@ export class TableStudentComponent implements OnInit {
     {id:1, nombre:'Juan Gonzalez', curso:'Angular', profesor: 'Javier Alvez', tutor:'Maria Diaz' },
     {id:1, nombre:'Noelia Martinez', curso:'React', profesor: 'Daniela Lopez', tutor:'Mariana Coppa' }
   ]
+ 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    
   }
 
+
 }
+
+
+/*
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

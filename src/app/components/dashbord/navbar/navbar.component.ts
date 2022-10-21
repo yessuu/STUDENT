@@ -1,4 +1,5 @@
-import { navbarData } from './nav-data';import { animate, keyframes, style, transition, trigger } from '@angular/animations';
+import { navbarData } from './data'; 
+import { animate, keyframes, style, transition, trigger } from '@angular/animations';
 import { Component, Output, EventEmitter, OnInit, HostListener } from '@angular/core';
 
 interface SideNavToggle {
@@ -39,7 +40,7 @@ interface SideNavToggle {
 })
 export class NavbarComponent implements OnInit {
 
-  @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
+ @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = false;
   screenWidth = 0;
   navData = navbarData;
