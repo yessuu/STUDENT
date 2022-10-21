@@ -14,6 +14,7 @@ export class UsuariosService {
     { nombre:'Juan Gonzalez', curso:'Angular', profesor: 'Javier Alvez', fechaInicio:new Date(20022, 4, 1),  inscripciones: false },
     { nombre:'Noelia Martinez', curso:'React', profesor: 'Daniela Lopez', fechaInicio:new Date(20022, 2, 4) ,inscripciones: true ,}
   ]
+  logout: any;
   constructor() { }
 
 getUsuario(){
