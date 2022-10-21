@@ -41,6 +41,9 @@ listaUsuarios:  Usuario[] = [];
     this._UsuariosService.deleteUser(index);
     this.cargarUsuarios();
   }
+  editUser(){
+    console.log(this._UsuariosService)
+   }
 
   ngAfterViewInit(){
     this.dataSource.paginator = this.paginator;

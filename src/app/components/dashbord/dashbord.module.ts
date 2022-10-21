@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 
 //PIPES
 import { BooleanATextoPipe } from 'src/app/pipes/boolean-a-texto.pipe';
+import { BooleanIconsDirective } from 'src/app/directive/boolean-icons.directive';
 
 @NgModule({
   
@@ -24,7 +25,8 @@ import { BooleanATextoPipe } from 'src/app/pipes/boolean-a-texto.pipe';
     NavbarComponent,
     AddStudentComponent,
     HomeComponent, 
-    BooleanATextoPipe
+    BooleanATextoPipe,
+    BooleanIconsDirective,
     
   ],
   imports: [

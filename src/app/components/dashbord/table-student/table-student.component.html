@@ -38,14 +38,14 @@
               <!-- Tutor Column -->
               <ng-container matColumnDef="inscripciones">
                 <th mat-header-cell *matHeaderCellDef> Inscripciones </th>
-                <td mat-cell *matCellDef="let element"> {{element.inscripciones | booleanATexto: 'Si': 'No' }} </td>
+                <td mat-cell *matCellDef="let element"> <span [appBooleanIcons]="element.inscripciones">{{element.inscripciones | booleanATexto: 'Si': 'No' }}</span> </td>
               </ng-container>
           
             <!-- Symbol Column -->
             <ng-container matColumnDef="acciones">
               <th mat-header-cell *matHeaderCellDef>Inscripciones</th>
               <td mat-cell *matCellDef="let element; let i = index">  
-                <a class="pointer"><i class="fa fa-pencil mr-3"></i></a>
+                <a class="pointer" (click)="editUser()"><i class="fa fa-pencil mr-3"></i></a>
                 <a class="pointer" (click)="deleteUser(i)"><i class="fa fa-trash-o"></i></a>
               </td>
             </ng-container>

@@ -11,6 +11,7 @@ import { SharedModule } from './components/shared/shared.module';
   declarations: [
     AppComponent,
     LoginComponent,
+   
   
   ],
   imports: [
