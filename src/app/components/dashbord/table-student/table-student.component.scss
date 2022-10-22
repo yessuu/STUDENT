@@ -2,9 +2,23 @@
     cursor: pointer;
 }
 table {
+    
     width: 100%;
+    background:transparent;
     
     th{
         width: 18%;
     }
+    th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+        padding: 0;
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        color: white;
+        letter-spacing: 0.5;
+        letter-spacing: 0.3;
+        font-size: 12px;
+    }
+  }
+  :host ::ng-deep.mat-paginator .mat-paginator-container{
+    justify-content: flex-start;
   }

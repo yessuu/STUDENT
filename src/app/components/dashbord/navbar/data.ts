@@ -10,9 +10,9 @@ export const navbarData = [
         label: 'Usuarios'
     },
     {
-        routeLink: 'agregar',
+        routeLink: 'cursos',
         icon: 'fa fa-tags',
-        label: 'Agregar'
+        label: 'Cursos'
     },
     {
         routeLink: 'pages',

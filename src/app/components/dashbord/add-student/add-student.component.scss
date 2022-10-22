@@ -1,0 +1,13 @@
+.mat-paginator-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 8px;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+}
+
+.mat-paginator-container {
+    min-height: 56px;
+}

@@ -1,4 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
-
+*{font-family:sans-serif}
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+body { background: #171d20; 
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #40404717;
+        background-clip: border-box;
+        border: 2px solid rgba(210, 142, 210, 0.688);
+        border-radius: 0.25rem;
+        color: #ffff;
+        letter-spacing: 0.8px;
+        border-radius: 12px;
+        padding: 16px 16px 0px 16px;
+       
+    }
+  
+    
+      
+}

@@ -12,6 +12,7 @@ import {MatTableModule} from '@angular/material/table';
 import {  MatSortModule } from '@angular/material/sort';
 import  {  MatPaginatorModule } from '@angular/material/paginator';
 import { BooleanATextoPipe } from 'src/app/pipes/boolean-a-texto.pipe';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   imports: [
@@ -27,6 +28,7 @@ import { BooleanATextoPipe } from 'src/app/pipes/boolean-a-texto.pipe';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
+    MatCardModule
     
     
   ],
@@ -42,7 +44,7 @@ import { BooleanATextoPipe } from 'src/app/pipes/boolean-a-texto.pipe';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    
+    MatCardModule
    
   ]
 })

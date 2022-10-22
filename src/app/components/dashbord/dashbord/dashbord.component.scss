@@ -1,0 +1,42 @@
+:host {
+    ::ng-deep {
+
+        .mat-card-title,
+        .mat-card-subtitle,
+        h1,
+        h2,
+        p {
+            color: #ffff;
+        }
+
+        .mat-card {
+            background: #1f2023;
+            padding: 24px;
+        }
+
+        mat-paginator.mat-paginator {
+            border-radius: 12px;
+            line-height: 24px;
+            margin-top: 4px;
+            background: black;
+            color: white;
+        }
+
+        .mat-select-value {
+            color: #f8f9fa;
+        }
+
+        .mat-icon-button.mat-button-base.mat-button-disabled {
+            color: #a3a3a38a;
+        }
+
+        .mat-paginator-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between !important;
+            flex-wrap: wrap-reverse;
+            width: 100%;
+            flex-direction: row-reverse !important;
+        }
+    }
+}

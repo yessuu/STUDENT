@@ -11,10 +11,12 @@ import { HeaderComponent } from './header/header.component';
 import { TableStudentComponent } from './table-student/table-student.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { HomeComponent } from './home/home.component';
+import { CursosComponent } from './cursos/cursos.component';
 
 //PIPES
 import { BooleanATextoPipe } from 'src/app/pipes/boolean-a-texto.pipe';
 import { BooleanIconsDirective } from 'src/app/directive/boolean-icons.directive';
+
 
 @NgModule({
   
@@ -27,6 +29,7 @@ import { BooleanIconsDirective } from 'src/app/directive/boolean-icons.directive
     HomeComponent, 
     BooleanATextoPipe,
     BooleanIconsDirective,
+    CursosComponent,
     
   ],
   imports: [

@@ -1,0 +1,141 @@
+body {
+    background: black;
+    color: white;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    //height: 100vh;
+}
+
+.logo {
+    position: relative;
+    overflow: hidden;
+    height: 720px;
+    width: 660px;
+
+
+}
+
+@keyframes uno {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes due {
+    0% {
+        opacity: 0;
+        transform: skewX(25.4deg) translate(0%, -100%);
+    }
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: skewX(25.4deg) translate(0%, 0%);
+    }
+}
+
+@keyframes tre {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes scaleup {
+    80% {
+        opacity: 0;
+        transform: scale(10);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Play/Reset animation */
+#replay {
+    display: none;
+
+    &:checked {
+        ~ .control-button.--play {
+            display: none;
+        }
+
+        ~ .control-button.--reload {
+            display: block;
+            animation: 3s 3.5s fadein ease-out both;
+        }
+
+        ~ .logo {
+            animation: 2s 1.5s scaleup ease-in both;
+
+            > .uno {
+                animation: .4s uno both;
+            }
+
+            > .due {
+                animation: .4s .4s due both;
+            }
+
+            > .tre {
+                animation: .4s .8s tre both;
+            }
+        }
+    }
+}
+
+.control-button {
+    position: absolute;
+    display: block;
+    animation: 0.8s fadein ease-out both;
+    color: white;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-align: center;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    border: 10px;
+    z-index: 2;
+    line-height: 1.2;
+
+    &.--reload {
+        display: none;
+    }
+ 
+    &__sub {
+        color: cadetblue;
+        font-size: 40px;
+        letter-spacing: 8px;
+        
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
