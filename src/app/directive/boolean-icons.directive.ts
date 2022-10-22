@@ -11,11 +11,14 @@ export class BooleanIconsDirective {
 
      }
      ngOnInit(): void{
-      this.renderer.setStyle(this.elemento.nativeElement, 'padding', '0px 10px 0px 10px');
-      this.renderer.setStyle(this.elemento.nativeElement, 'border-radius', '20px');
-      this.renderer.setStyle(this.elemento.nativeElement, 'color', 'red'),
+      this.renderer.setStyle(this.elemento.nativeElement, 'padding', '2px 15px 2px 15px');
+      this.renderer.setStyle(this.elemento.nativeElement, 'border-radius', '40px');
+      this.renderer.setStyle(this.elemento.nativeElement, 'margin-left', '15px');
+      this.renderer.setStyle(this.elemento.nativeElement, 'color', 'white'),
+      this.renderer.setStyle(this.elemento.nativeElement, 'font-size', '12px'),
+      this.renderer.setStyle(this.elemento.nativeElement, 'font-weight', '700'),
       this.renderer.setStyle(
-        this.elemento.nativeElement, 'background-color', this.inscripciones ? 'pink': 'green')
+        this.elemento.nativeElement, 'background-color', this.inscripciones ? 'green': 'pink')
 
 }
 }

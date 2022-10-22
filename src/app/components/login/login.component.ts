@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, RequiredValidator, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-
-import { end } from '@popperjs/core';
+import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +15,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
     private _snackBar: MatSnackBar,
-    private router: Router) {
+    private router: Router,
+    private _UsuariosService: UsuariosService) {
     this.formularioUsuario = fb.group({
       user: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required, Validators.minLength(5)]),
@@ -58,4 +58,5 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['dashbord'])
     }, 1500);
   }
+  
 }
